@@ -1,0 +1,111 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 2022-09-16 14:26:31
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.3, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 1026720984 bytes (979 MiB) / 2147483648 bytes (2048 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 16
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12600KF
+	Identifier: Intel64 Family 6 Model 151 Stepping 2
+	Microarchitecture: unknown
+	Frequency (GHz): 3.69
+	Number of physical packages: 1
+	Number of physical CPUs: 10
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 3080
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x220a
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.1694
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 19261.14
+	Virtual memory used (MB): 14973.76
+	Swap memory total (MB): 3035.48
+	Swap memory used (MB): 326.98
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	Loaded Shaderpack: BSL_v8.1.02.3.zip
+		Profile: ULTRA (+2 options changed by user)
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Ryu1654'/110, l='ServerLevel[Adventure 01]', x=-75.30, y=106.00, z=-10.85]]
+	Data Packs: vanilla, mod:farmersdelight (incompatible), mod:terrablender, mod:mousetweaks, mod:signpost, mod:biomesoplenty, mod:jei (incompatible), mod:simplylight (incompatible), mod:libraryferret, mod:rubidium (incompatible), mod:curios, mod:waystones (incompatible), mod:oculus (incompatible), mod:clumps (incompatible), mod:journeymap (incompatible), mod:naturescompass (incompatible), mod:configured (incompatible), mod:angelring (incompatible), mod:bettervillage, mod:decorative_blocks (incompatible), mod:inventoryhud, mod:eatinganimation (incompatible), mod:mcwdoors, mod:cfm (incompatible), mod:hardernaturalhealing, mod:balm (incompatible), mod:terralith (incompatible), mod:byg, mod:framework (incompatible), mod:forge, mod:appleskin, mod:aquaculture, mod:gamemenumodoption, mod:effortlessbuilding (incompatible), mod:wwoo_forge, 1.19_default.zip, structure_mod_compat.zip
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: 1.19.2-forge-43.1.1
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.1.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.1.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.1.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.1.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.1.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		FarmersDelight-1.19-1.1.2.jar                     |Farmer's Delight              |farmersdelight                |1.19-1.1.2          |DONE      |Manifest: NOSIGNATURE
+		TerraBlender-forge-1.19.2-2.0.1.127.jar           |TerraBlender                  |terrablender                  |2.0.1.127           |DONE      |Manifest: NOSIGNATURE
+		MouseTweaks-forge-mc1.19-2.23.jar                 |Mouse Tweaks                  |mousetweaks                   |2.23                |DONE      |Manifest: NOSIGNATURE
+		signpost-1.19.2-2.00.5.jar                        |Signpost                      |signpost                      |1.19.2-2.00.5       |DONE      |Manifest: NOSIGNATURE
+		BiomesOPlenty-1.19.2-17.1.1.152.jar               |Biomes O' Plenty              |biomesoplenty                 |17.1.1.152          |DONE      |Manifest: NOSIGNATURE
+		jei-1.19.2-forge-11.3.0.262.jar                   |Just Enough Items             |jei                           |11.3.0.262          |DONE      |Manifest: NOSIGNATURE
+		simplylight-1.19-1.4.4-build.39.jar               |Simply Light                  |simplylight                   |1.19-1.4.4-build.39 |DONE      |Manifest: NOSIGNATURE
+		libraryferret-forge-1.19.2-3.0.0.jar              |Library ferret                |libraryferret                 |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		rubidium-0.6.2.jar                                |Rubidium                      |rubidium                      |0.6.2               |DONE      |Manifest: NOSIGNATURE
+		curios-forge-1.19.2-5.1.1.0.jar                   |Curios API                    |curios                        |1.19.2-5.1.1.0      |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.19-11.1.0.jar                   |Waystones                     |waystones                     |11.1.0              |DONE      |Manifest: NOSIGNATURE
+		oculus-mc1.19.2-1.2.8.jar                         |Oculus                        |oculus                        |1.2.8               |DONE      |Manifest: NOSIGNATURE
+		Clumps-forge-1.19.2-9.0.0+11.jar                  |Clumps                        |clumps                        |9.0.0+11            |DONE      |Manifest: NOSIGNATURE
+		journeymap-1.19.1-5.9.0beta2-forge.jar            |Journeymap                    |journeymap                    |5.9.0beta2          |DONE      |Manifest: NOSIGNATURE
+		NaturesCompass-1.19.2-1.9.7-forge.jar             |Nature's Compass              |naturescompass                |1.19.2-1.9.7-forge  |DONE      |Manifest: NOSIGNATURE
+		configured-1.5.8-1.19.jar                         |Configured                    |configured                    |1.5.8               |DONE      |Manifest: NOSIGNATURE
+		angelring-1.19-2.1.3.jar                          |Angel Ring 2                  |angelring                     |2.1.3               |DONE      |Manifest: NOSIGNATURE
+		bettervillage-forge-1.19.2-2.0.0.jar              |Better village                |bettervillage                 |2.0.0               |DONE      |Manifest: NOSIGNATURE
+		Decorative+Blocks-forge-1.19.2-3.0.0.jar          |Decorative Blocks             |decorative_blocks             |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		InventoryHud_[1.19.2].forge-3.4.6.jar             |Inventory HUD+(Forge edition) |inventoryhud                  |3.4.6               |DONE      |Manifest: NOSIGNATURE
+		eatinganimation-1.19-3.1.0.jar                    |Eating Animation              |eatinganimation               |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		client-1.19.2-20220805.130853-srg.jar             |Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		mcw-doors-1.0.7-mc1.19.2.jar                      |Macaw's Doors                 |mcwdoors                      |1.0.7               |DONE      |Manifest: NOSIGNATURE
+		cfm-7.0.0-pre34-1.19.jar                          |MrCrayfish's Furniture Mod    |cfm                           |7.0.0-pre34         |DONE      |Manifest: NOSIGNATURE
+		HarderNaturalHealing-1.19-41.1.12.0.jar           |Harder Natural Healing Mod    |hardernaturalhealing          |41.1.12.0           |DONE      |Manifest: NOSIGNATURE
+		balm-4.5.3.jar                                    |Balm                          |balm                          |4.5.3               |DONE      |Manifest: NOSIGNATURE
+		Terralith_v2.3.3.jar                              |Terralith                     |terralith                     |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		Oh_The_Biomes_You'll_Go-forge-1.19.2-2.0.0.11.jar |Oh The Biomes You'll Go       |byg                           |2.0.0.11            |DONE      |Manifest: NOSIGNATURE
+		framework-0.3.3-1.19.jar                          |Framework                     |framework                     |0.3.3               |DONE      |Manifest: NOSIGNATURE
+		forge-1.19.2-43.1.1-universal.jar                 |Forge                         |forge                         |43.1.1              |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		appleskin-forge-mc1.19-2.4.2.jar                  |AppleSkin                     |appleskin                     |2.4.2+mc1.19        |DONE      |Manifest: NOSIGNATURE
+		Aquaculture-1.19.2-2.4.6.jar                      |Aquaculture 2                 |aquaculture                   |1.19.2-2.4.6        |DONE      |Manifest: NOSIGNATURE
+		GameMenuModOption-1.19-1.18.jar                   |Game Menu Mod Option          |gamemenumodoption             |1.18                |DONE      |Manifest: NOSIGNATURE
+		effortlessbuilding-1.19-2.35.jar                  |Effortless Building           |effortlessbuilding            |1.19-2.35           |DONE      |Manifest: NOSIGNATURE
+		wwoo_forge-3.1.7+1.19.2.jar                       |William Wythers Overhauled Ove|wwoo_forge                    |3.1.7               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 427860b4-806b-4049-bd3f-740c5e960c3e
+	FML: 43.1
+	Forge: net.minecraftforge:43.1.1
